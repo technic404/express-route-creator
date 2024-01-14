@@ -3,7 +3,7 @@ This tool will help you organize your backend very easily.
 Also you can create all backend api files with just few entries in scheme!
 
 ## Example of building backend schematic
-Create empty file just for init for example `init.js`.
+Create empty file just for init, for example `init.js`.
 ```js
 const RouteManager = require("./lib/creator");
 
@@ -54,7 +54,20 @@ app.listen(PORT, () => {
 
 const manager = new RouteManager(app);
 
-manager.initializer.init("v1", "./routes");
+manager.initializer.init("api", "./routes");
+```
+
+#### Deeper explanation
+
+Here we put `app` from `const app = express();` inside constructor.
+```js
+const manager = new RouteManager(app);
+```
+To register the routes we use `manager.initializer.init()`. 
+- First argument is a prefix that will be before each route, for example `https://domain.pl/api/user/create`. 
+- Second argument is a directory where routes are located.
+```js
+manager.initializer.init("api", "./routes");
 ```
 
 Yeah - that's it, you have all your backend files organized and registered! 🚀
