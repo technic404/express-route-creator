@@ -33,7 +33,7 @@ new RouteManager().schematicBuilder.create("./routes", {
 })
 ```
 
-That example schematic when run with `node init.js` will create properly prepared api files these files:
+That example schematic when run with `node init.js` will create properly prepared api files:
 - `/routes/user/create.js`
 - `/routes/user/delete.js`
 - `/routes/user/get.js`
